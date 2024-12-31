@@ -203,8 +203,13 @@ buttonA.addEventListener("click", () => {
 });
 
 buttonE.addEventListener("click", () => {
+  buttonD.disabled = false;
+  buttonM.disabled = false;
+  buttonS.disabled = false;
+  buttonA.disabled = false;
   operand1 = getComputation(operand1, operand2, operator);
 
   display.textContent = operand1;
+  operator = '';
   operand2 = '';
 });
