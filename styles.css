@@ -4,8 +4,13 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 160px;
   background-color: aquamarine;
+}
+
+#entire-container {
+  display: flex;
+  flex-direction: column;
 }
 
 #full-container {
@@ -20,6 +25,10 @@ body {
   width: 400px;
   justify-content: center;
   align-items: center;
+}
+
+.heading {
+  text-align: center;
 }
 
 .display {
@@ -77,6 +86,11 @@ body {
 .number0,
 .dot {
   padding: 20px;
+}
+
+.number0 {
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 button {
