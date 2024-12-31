@@ -203,17 +203,8 @@ buttonA.addEventListener("click", () => {
 });
 
 buttonE.addEventListener("click", () => {
-  buttonE.disabled = true;
-  button0.disabled = true;
-  button1.disabled = true;
-  button2.disabled = true;
-  button3.disabled = true;
-  button4.disabled = true;
-  button5.disabled = true;
-  button6.disabled = true;
-  button7.disabled = true;
-  button8.disabled = true;
-  button9.disabled = true;
+  operand1 = getComputation(operand1, operand2, operator);
 
-  display.textContent = getComputation(operand1, operand2, operator);
+  display.textContent = operand1;
+  operand2 = '';
 });
