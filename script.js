@@ -169,6 +169,19 @@ buttonD.addEventListener("click", () => {
   buttonS.disabled = true;
   buttonA.disabled = true;
 
+  if(operand2 === '') {
+    button0.disabled = false;
+    button1.disabled = false;
+    button2.disabled = false;
+    button3.disabled = false;
+    button4.disabled = false;
+    button5.disabled = false;
+    button6.disabled = false;
+    button7.disabled = false;
+    button8.disabled = false;
+    button9.disabled = false;
+  }
+
   display.textContent += buttonD.innerHTML.toString();
 });
 
@@ -178,6 +191,19 @@ buttonM.addEventListener("click", () => {
   buttonM.disabled = true;
   buttonS.disabled = true;
   buttonA.disabled = true;
+
+  if(operand2 === '') {
+    button0.disabled = false;
+    button1.disabled = false;
+    button2.disabled = false;
+    button3.disabled = false;
+    button4.disabled = false;
+    button5.disabled = false;
+    button6.disabled = false;
+    button7.disabled = false;
+    button8.disabled = false;
+    button9.disabled = false;
+  }
 
   display.textContent += buttonM.innerHTML.toString();
 });
@@ -189,6 +215,19 @@ buttonS.addEventListener("click", () => {
   buttonS.disabled = true;
   buttonA.disabled = true;
 
+  if(operand2 === '') {
+    button0.disabled = false;
+    button1.disabled = false;
+    button2.disabled = false;
+    button3.disabled = false;
+    button4.disabled = false;
+    button5.disabled = false;
+    button6.disabled = false;
+    button7.disabled = false;
+    button8.disabled = false;
+    button9.disabled = false;
+  }
+
   display.textContent += buttonS.innerHTML.toString();
 });
 
@@ -199,14 +238,39 @@ buttonA.addEventListener("click", () => {
   buttonS.disabled = true;
   buttonA.disabled = true;
 
+  if(operand2 === '') {
+    button0.disabled = false;
+    button1.disabled = false;
+    button2.disabled = false;
+    button3.disabled = false;
+    button4.disabled = false;
+    button5.disabled = false;
+    button6.disabled = false;
+    button7.disabled = false;
+    button8.disabled = false;
+    button9.disabled = false;
+  }
+
   display.textContent += buttonA.innerHTML.toString();
 });
 
 buttonE.addEventListener("click", () => {
+  button0.disabled = true;
+  button1.disabled = true;
+  button2.disabled = true;
+  button3.disabled = true;
+  button4.disabled = true;
+  button5.disabled = true;
+  button6.disabled = true;
+  button7.disabled = true;
+  button8.disabled = true;
+  button9.disabled = true;
+
   buttonD.disabled = false;
   buttonM.disabled = false;
   buttonS.disabled = false;
   buttonA.disabled = false;
+  buttonE.disabled = true;
   operand1 = getComputation(operand1, operand2, operator);
 
   display.textContent = operand1;
