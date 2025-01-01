@@ -9,6 +9,8 @@ const button7 = document.querySelector(".number7");
 const button8 = document.querySelector(".number8");
 const button9 = document.querySelector(".number9");
 
+
+const buttonAC = document.querySelector(".clear");
 const buttonD = document.querySelector(".division");
 const buttonM = document.querySelector(".multiplication");
 const buttonS = document.querySelector(".subtraction");
@@ -40,11 +42,19 @@ function getComputation(op1, op2, operator) {
   }
 }
 
+buttonD.disabled = true;
+buttonM.disabled = true;
+buttonS.disabled = true;
+buttonA.disabled = true;
 buttonE.disabled = true;
 
 button0.addEventListener("click", () => {
   if(operator === '') {
     operand1 += button0.innerHTML.toString();
+    buttonD.disabled = false;
+  buttonM.disabled = false;
+  buttonS.disabled = false;
+  buttonA.disabled = false;
   }
   else {
     operand2 += button0.innerHTML.toString();
@@ -57,6 +67,10 @@ button0.addEventListener("click", () => {
 button1.addEventListener("click", () => {
   if(operator === '') {
     operand1 += button1.innerHTML.toString();
+    buttonD.disabled = false;
+  buttonM.disabled = false;
+  buttonS.disabled = false;
+  buttonA.disabled = false;
   }
   else {
     operand2 += button1.innerHTML.toString();
@@ -69,6 +83,10 @@ button1.addEventListener("click", () => {
 button2.addEventListener("click", () => {
   if(operator === '') {
     operand1 += button2.innerHTML.toString();
+    buttonD.disabled = false;
+  buttonM.disabled = false;
+  buttonS.disabled = false;
+  buttonA.disabled = false;
   }
   else {
     operand2 += button2.innerHTML.toString();
@@ -81,6 +99,10 @@ button2.addEventListener("click", () => {
 button3.addEventListener("click", () => {
   if(operator === '') {
     operand1 += button3.innerHTML.toString();
+    buttonD.disabled = false;
+  buttonM.disabled = false;
+  buttonS.disabled = false;
+  buttonA.disabled = false;
   }
   else {
     operand2 += button3.innerHTML.toString();
@@ -93,6 +115,10 @@ button3.addEventListener("click", () => {
 button4.addEventListener("click", () => {
   if(operator === '') {
     operand1 += button4.innerHTML.toString();
+    buttonD.disabled = false;
+  buttonM.disabled = false;
+  buttonS.disabled = false;
+  buttonA.disabled = false;
   }
   else {
     operand2 += button4.innerHTML.toString();
@@ -105,6 +131,10 @@ button4.addEventListener("click", () => {
 button5.addEventListener("click", () => {
   if(operator === '') {
     operand1 += button5.innerHTML.toString();
+    buttonD.disabled = false;
+  buttonM.disabled = false;
+  buttonS.disabled = false;
+  buttonA.disabled = false;
   }
   else {
     operand2 += button5.innerHTML.toString();
@@ -117,6 +147,10 @@ button5.addEventListener("click", () => {
 button6.addEventListener("click", () => {
   if(operator === '') {
     operand1 += button6.innerHTML.toString();
+    buttonD.disabled = false;
+  buttonM.disabled = false;
+  buttonS.disabled = false;
+  buttonA.disabled = false;
   }
   else {
     operand2 += button6.innerHTML.toString();
@@ -129,6 +163,10 @@ button6.addEventListener("click", () => {
 button7.addEventListener("click", () => {
   if(operator === '') {
     operand1 += button7.innerHTML.toString();
+    buttonD.disabled = false;
+  buttonM.disabled = false;
+  buttonS.disabled = false;
+  buttonA.disabled = false;
   }
   else {
     operand2 += button7.innerHTML.toString();
@@ -141,6 +179,10 @@ button7.addEventListener("click", () => {
 button8.addEventListener("click", () => {
   if(operator === '') {
     operand1 += button8.innerHTML.toString();
+    buttonD.disabled = false;
+  buttonM.disabled = false;
+  buttonS.disabled = false;
+  buttonA.disabled = false;
   }
   else {
     operand2 += button8.innerHTML.toString();
@@ -153,6 +195,10 @@ button8.addEventListener("click", () => {
 button9.addEventListener("click", () => {
   if(operator === '') {
     operand1 += button9.innerHTML.toString();
+    buttonD.disabled = false;
+  buttonM.disabled = false;
+  buttonS.disabled = false;
+  buttonA.disabled = false;
   }
   else {
     operand2 += button9.innerHTML.toString();
@@ -160,6 +206,29 @@ button9.addEventListener("click", () => {
   }
 
   display.textContent += button9.innerHTML;
+});
+
+buttonAC.addEventListener("click", () => {
+  operator = '';
+  operand1 = '';
+  operand2 = '';
+  display.textContent = '';
+
+  button0.disabled = false;
+  button1.disabled = false;
+  button2.disabled = false;
+  button3.disabled = false;
+  button4.disabled = false;
+  button5.disabled = false;
+  button6.disabled = false;
+  button7.disabled = false;
+  button8.disabled = false;
+  button9.disabled = false;
+
+  buttonD.disabled = true;
+  buttonM.disabled = true;
+  buttonS.disabled = true;
+  buttonA.disabled = true;
 });
 
 buttonD.addEventListener("click", () => {
